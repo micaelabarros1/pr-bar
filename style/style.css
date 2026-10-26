@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap');
+
+body{
+    background-color: #000000;
+color: #ffffff;
+}
+
+h1{
+    font-family: Permanent Market;
+    font-size: 60px;
+    color:#e72a76;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: lobster, sans-serif;
+
+
+}
+
+
+
+p{
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    color: #ff571c;
+
+}
+
+.logo{
+    height:100px;
+    width: auto;
+}
+.rrss{
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--heading);
+    font-weight: 600;
+    font: 1em sans-serif;
+
+}
+main img{
+    height:auto;
+    width: 50px;
+}
+main p{
+    font-size: 15px;
+}
+
+.comida { 
+    height: 500px;
+    width: auto;
+}
+.tragos {
+    height: 500px;
+width: auto;
+}
+
+.fichines {
+    height: 600px;
+    width: auto;
+}
+
+.video-juegos { 
+    width: 400px; 
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px
+}
+.bar {
+    height: 600px;
+    width: auto;
+}
+
+
