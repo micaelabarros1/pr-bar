@@ -1,18 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap');
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --heading: #e72a76;
+}
 
 body{
+    font-family: Montserrat, sans-serif;
     background-color: #000000;
-color: #ffffff;
+    color: #ffffff;
 }
 
 h1{
-    font-family: Permanent Market;
+    font-family: "Permanent Marker" , cursive;
     font-size: 60px;
     color:#e72a76;
+    margin-left: 20px;
 }
 
 h2, h3, h4, h5, h6 {
-    font-family: lobster, sans-serif;
+    font-family: Montserrat, sans-serif;
 
 
 }
@@ -23,6 +33,7 @@ p{
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     color: #ff571c;
+    margin-left: 30px;
 
 }
 
@@ -40,11 +51,13 @@ p{
 
  nav ul{
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin:  0;
     flex-wrap: wrap;
 }
 
@@ -52,7 +65,7 @@ a{
     text-decoration: none;
     color: var(--heading);
     font-weight: 600;
-    font: 1em Monserrat, sans-serif;
+    font-family: Montserrat, sans-serif;
 
 }
 main img{
@@ -60,7 +73,11 @@ main img{
     width: 50px;
 }
 main p{
-    font-size: 15px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+section { 
+    margin-bottom: 30px;
 }
 
 .comida { 
@@ -73,19 +90,71 @@ width: auto;
 }
 
 .fichines {
-    height: 600px;
-    width: auto;
+    display: block;
+    width: 350px;
+    margin: 20px auto;
+    max-width: 90%;
+    height: auto;
 }
 
 .video-juegos { 
-    width: 400px; 
-    max-width: 100%;
+    width: 350px; 
+    max-width: 90%;
     height: auto;
-    border-radius: 10px
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
 }
 .bar {
-    height: 600px;
-    width: auto;
+    width: 70%;
+    max-width: 600%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
+footer { 
+    padding: 20px 30px;
+}
 
+footer h2 { 
+    margin-bottom: 30px;
+}
+footer p { 
+    margin-bottom: 8px;
+    margin-left: 0px;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .bar,
+    .fichines,
+    .video-juegos {
+        max-width: 90%;
+    }
+}
