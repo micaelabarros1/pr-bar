@@ -49,7 +49,7 @@ p{
     
 }
 
- nav ul{
+nav ul{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -71,6 +71,7 @@ a{
 main img{
     height:auto;
     width: 50px;
+    border-radius: 15px;
 }
 main p{
     padding: 10px 20px;
@@ -90,27 +91,41 @@ width: auto;
 }
 
 .fichines {
-    display: block;
     width: 350px;
-    margin: 20px auto;
     max-width: 90%;
     height: auto;
+    border-radius: 20px;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto;
 }
 
 .video-juegos { 
-    width: 350px; 
+    width: 250px; 
     max-width: 90%;
     height: auto;
     border-radius: 10px;
     display: block;
     margin: 20px auto;
 }
+
+.flex-juegos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
 .bar {
-    width: 70%;
-    max-width: 600%;
+    width: 40%;
+    max-width: 180px;
     height: auto;
     display: block;
     margin: 20px auto;
+    border-radius: 20px;
 }
 header {
     display: flex;
@@ -142,6 +157,7 @@ footer ul {
         flex-direction: column;
         align-items: center;
     }
+    }
 
     nav ul {
         justify-content: center;
@@ -156,5 +172,101 @@ footer ul {
     .fichines,
     .video-juegos {
         max-width: 90%;
+    }
+
+.pagina-inicio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "encabezado"
+        "contenido"
+        "pie";
+        gap: 1rem; 
+}
+.pagina-inicio > header {
+    grid-area: encabezado;
+}
+.pagina-inicio > main {
+    grid-area: contenido;
+}
+.pagina-inicio > footer {
+    grid-area: pie;
+}
+
+@media (min-width: 1024px) {
+    .pagina-inicio {
+        grid-template-rows: auto auto auto;
+        justify-items: start;
+        grid-template-areas:
+            "encabezado encabezado"
+            "contenido contenido"
+            "pie pie";
+    }
+    .contenido-inicio {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        max-width: 900px;
+        margin: 0 auto;
+        grid-template-areas:
+            "titulo "
+            "descripcion"
+            " imagen";
+        gap: 30px;
+        row-gap: 10px;
+        align-items: center;
+        grid-template-rows: auto;
+    }
+    .titulo-inicio {
+        align-self: end;
+    }
+    .descripcion-inicio {
+        align-self: start;
+    }
+    .imagen-inicio {
+        grid-area: imagen;
+    }
+}
+.texto-nosotros {
+    max-width: 800px;
+    margin: 40px auto;
+    padding:  20px;
+
+}
+.texto-nosotros h2 {
+    color:#e72a76;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+.texto-nosotros p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.grid-carta img {
+    width: 100%;
+    height: auto; 
+    border-radius: 20px;
+} 
+.grid-carta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 650px;
+    margin: 0 auto;
+
+}
+@media (max-width: 768px) {
+    .grid-carta {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (min-width: 1024px) {
+    .grid-carta {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
